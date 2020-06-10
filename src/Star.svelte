@@ -1,7 +1,7 @@
 <script>
   export let full;
   // use vpn id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
-  export let id;
+  export let id = "000";
   export let config;
   const fullColor = config.fullColor || "#ffcf00";
   const emptyColor = config.emptyColor || "#7f7f7f";
