@@ -1,7 +1,10 @@
 <script>
-  import Star from "./Star.svelte";
-  export let id;
+  import isNumber from './utils/isNumber';
+  import Star from './Star.svelte';
+  export let id = '000';
   export let rating;
+  // TODO check if rating prop is number and between 0 and 5
+  // if (!isNumber(rating) || rating < 0 || rating > 5) throw new Error('mal');
   export let config;
   // number of full, 'half' and empty stars
   const full = Math.floor(rating);
@@ -13,7 +16,7 @@
   const emptyArr = Array(empty).fill(0);
   // array of star-to-be numbers
   const stars = fullArr.concat(halfArr).concat(emptyArr);
-  // TODO do all this array thing more efficiently
+  // TODO do all this array thing a litter more efficiently
 </script>
 
 <style>

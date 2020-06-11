@@ -1,11 +1,15 @@
 <script>
+  import isNumber from './utils/isNumber';
+  // array of Numbers from 0 to 1
   export let full;
-  // use vpn id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
-  export let id = "000";
+  // use id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
+  export let id;
   export let config;
-  const fullColor = config.fullColor || "#ffcf00";
-  const emptyColor = config.emptyColor || "#7f7f7f";
-  const width = config.size || "20px";
+  const fullColor = config.fullColor || '#ffcf00';
+  const emptyColor = config.emptyColor || '#7f7f7f';
+  // check user size input
+  let width = config.size && isNumber(config.size) ? config.size : 20;
+  width = width + 'px';
   const height = width;
 </script>
 
