@@ -36,12 +36,12 @@ The component takes a number of props:
 
 **About the config object**:
 
-| Option     | Type    | Default | Description                                     |
-| ---------- | ------- | ------- | ----------------------------------------------- |
-| fullColor  | Number  | -       | The color for the filling of the stars          |
-| emptyColor | String  | '000'   | The color for the empty parts of the stars      |
-| size       | Number  | 20      | The size of the stars. Pass a number of pixels. |
-| showText   | Boolean | false   | Show the rating number next to the stars or not |
+| Option     | Type    | Default   | Description                                     |
+| ---------- | ------- | --------- | ----------------------------------------------- |
+| fullColor  | String  | '#ffcf00' | The color for the filling of the stars          |
+| emptyColor | String  | '#7f7f7f' | The color for the empty parts of the stars      |
+| size       | Number  | 20        | The size of the stars. Pass a number of pixels. |
+| showText   | Boolean | false     | Show the rating number next to the stars or not |
 
 ### Be aware
 
@@ -73,7 +73,7 @@ Output:
 ```html
 <script>
   import StarRating from 'svelte-star-rating';
-  // id for ilustrative purposes. Ideally it would be generated, or passed from the app data
+  // id for ilustrative purposes only. Ideally it would be generated, or passed from the app data
   const id = '42';
   const rating = 3.35;
   const config = {
@@ -98,6 +98,7 @@ Output:
 
 ## Future
 
+- [ ] Write tests.
 - [ ] The component generates the unique id, no need to pass one.
 - [ ] Check the user input rating and return an error or something more usefull than just breaking the thing.
 - [ ] Improve styling of the rating number.
