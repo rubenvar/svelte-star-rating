@@ -4,7 +4,7 @@
   export let full;
   // use id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
   export let id;
-  export let config;
+  export let config = {};
   const fullColor = config.fullColor || '#ffcf00';
   const emptyColor = config.emptyColor || '#7f7f7f';
   // check user size input
