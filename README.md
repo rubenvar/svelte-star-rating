@@ -66,7 +66,7 @@ Use it as follows:
 
 Output:
 
-![Simple example of Svelte Star Rating](./docs/example-simple.png)
+![Simple example of Svelte Star Rating](./docs/example-simple.jpg)
 
 #### More advanced
 
@@ -89,7 +89,7 @@ Output:
 
 Output:
 
-![Advanced example of Svelte Star Rating](./docs/example-advanced.png)
+![Advanced example of Svelte Star Rating](./docs/example-advanced.jpg)
 
 ### Be careful
 
