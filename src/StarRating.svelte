@@ -3,6 +3,7 @@
   import Star from './Star.svelte';
   export let id = '000';
   export let rating;
+  export let style = '';
   // TODO check if rating prop is number and between 0 and 5
   // if (!isNumber(rating) || rating < 0 || rating > 5) throw new Error('mal');
   export let config = {};
@@ -35,7 +36,7 @@
   }
 </style>
 
-<div>
+<div {style}>
   {#each stars as star}
     <Star {id} full={star} {config} />
   {/each}

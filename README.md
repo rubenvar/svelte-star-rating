@@ -31,6 +31,7 @@ The component takes a number of props:
 | rating | Number | -       | Yes      | The rating. Any number from 0 to 5.0                          |
 | id     | String | '000'   | No       | Not needed for a single instance. Read below for more details |
 | config | Object | {}      | No       | Config options for the component. See below                   |
+| style  | String | -       | No       | CSS styles passed directly to the container component         |
 
 **About the id**: It is not needed for a single instace of the component. If the component appears more than once in the page, you **need** to pass a unique id each time for it to work properly.
 
@@ -42,6 +43,8 @@ The component takes a number of props:
 | emptyColor | String  | '#7f7f7f' | The color for the empty parts of the stars      |
 | size       | Number  | 20        | The size of the stars. Pass a number of pixels. |
 | showText   | Boolean | false     | Show the rating number next to the stars or not |
+
+**About the style prop**: It accepts a string of css styles, written as inline-css. It is passed directly, unchecked, to the main `div` as inline-css. Use it cautiously.
 
 ### Be aware
 
@@ -82,9 +85,10 @@ Output:
     size: 42,
     showText: true,
   };
+  const style = 'border: 1px solid firebrick;padding: 12px;';
 </script>
 
-<StarRating {id} {rating} {config} />
+<StarRating {id} {rating} {config} {style} />
 ```
 
 Output:
