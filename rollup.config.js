@@ -9,6 +9,6 @@ export default {
     { file: pkg.module, format: 'es' },
     { file: pkg.main, format: 'umd', name: 'StarRating' },
   ],
-  // use 'generate: 'ssr'' to be able to use this component is sapper
+  // use 'generate: 'ssr'' to be able to use this component in sapper
   plugins: [resolve(), svelte({ generate: 'ssr' })],
 };
