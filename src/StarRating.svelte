@@ -5,7 +5,8 @@
   export let rating;
   export let style = '';
   // TODO check if rating prop is number and between 0 and 5
-  // if (!isNumber(rating) || rating < 0 || rating > 5) throw new Error('mal');
+  // maybe something in the line of:
+  // if (!isNumber(rating) || rating < 0 || rating > 5) throw new Error();
   export let config = {};
   // number of full, 'half' and empty stars
   const full = Math.floor(rating);
