@@ -30,6 +30,7 @@
     "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {},
   "devDependencies": {
     "rollup": "^2.15.0",
     "rollup-plugin-node-resolve": "^5.2.0",
