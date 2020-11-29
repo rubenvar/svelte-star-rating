@@ -2,20 +2,20 @@
 
 ## What is this
 
-A simple [svelte](https://svelte.dev/) component that shows a rating from 0 to 5 with svg stars when passed a number. No dependencies required.
+A simple [svelte](https://svelte.dev/) component that shows a rating from 0 to 5 with svg stars. Just need to pass a number. No dependencies required.
 
 ## Installation
 
-As with any other node package
+As with any other node package in svelte:
 
 ```bash
 npm install svelte-star-rating
 ```
 
-or
+But remember to install it as a **dev dependency** when using [Sapper](https://sapper.svelte.dev/):
 
 ```bash
-yarn add svelte-star-rating
+npm install svelte-star-rating --save-dev
 ```
 
 ## Usage
@@ -24,14 +24,14 @@ The package exports a svelte component.
 
 The component takes a number of props:
 
-| Prop   | Type   | Default | Required | Description                                                   |
-| ------ | ------ | ------- | -------- | ------------------------------------------------------------- |
-| rating | Number | -       | Yes      | The rating. Any number from 0 to 5.0                          |
-| id     | String | '000'   | No       | Not needed for a single instance. Read below for more details |
-| config | Object | {}      | No       | Config options for the component. See below                   |
-| style  | String | -       | No       | CSS styles passed directly to the container component         |
+| Prop   | Type   | Default | Required | Description                                           |
+| ------ | ------ | ------- | -------- | ----------------------------------------------------- |
+| rating | Number | -       | Yes      | The rating. Any number from 0 to 5.0                  |
+| config | Object | {}      | No       | Config options for the component. See below           |
+| style  | String | -       | No       | CSS styles passed directly to the container component |
+| id     | String | -       | No       | DEPRECATED                                            |
 
-**About the id**: It is not needed for a single instace of the component. If the component appears more than once in the page, you **need** to pass a unique id each time for it to work properly.
+About the id: **DEPRECATED**. It was required for multiple instaces of this component to work correctly in the same page. The component now generates its own unique ids. Not needed anymore, will be removed in the next major update.
 
 **About the config object**:
 
@@ -46,7 +46,7 @@ The component takes a number of props:
 
 ### Be aware
 
-- Any css-valid color is accepted (hsl, hex, rgb, etc.).
+- Any css-valid color is accepted (hsl, hex, rgb, string, etc.).
 - Stars are 1:1 proportionate (width equals height, so both equal the size property).
 - If the rating number is shown, font size is half the star size or 16px, whatever is higher.
 
@@ -56,13 +56,12 @@ Use it as follows:
 
 #### Simple
 
-```html
+```svelte
 <script>
   import StarRating from 'svelte-star-rating';
-  const rating = 3.35;
 </script>
 
-<StarRating {rating} />
+<StarRating rating={3.35} />
 ```
 
 Output:
@@ -71,11 +70,9 @@ Output:
 
 #### More advanced
 
-```html
+```svelte
 <script>
   import StarRating from 'svelte-star-rating';
-  // id for ilustrative purposes only. Ideally it would be generated, or passed from the app data
-  const id = '42';
   const rating = 3.35;
   const config = {
     fullColor: '#f05',
@@ -86,7 +83,7 @@ Output:
   const style = 'border: 1px solid firebrick;padding: 12px;';
 </script>
 
-<StarRating {id} {rating} {config} {style} />
+<StarRating {rating} {config} {style} />
 ```
 
 Output:
@@ -96,11 +93,10 @@ Output:
 ### Be careful
 
 - Passing a rating higher than 5.0 or lower than 0.0 will break the component.
-- Not passing a unique id if there are more than one component per page will make all of the copies to show the same rating.
 
 ## Future
 
 - [ ] Write tests.
-- [ ] The component generates the unique id, no need to pass one.
 - [ ] Check the user input rating and return an error or something more usefull than just breaking the thing.
 - [ ] Improve styling of the rating number.
+- [x] The component generates the unique id, no need to pass one.

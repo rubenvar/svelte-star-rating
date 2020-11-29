@@ -1,7 +1,9 @@
 <script>
   import isNumber from './utils/isNumber';
+  import makeUniqueId from './utils/makeUniqueId';
   import Star from './Star.svelte';
-  export let id = '000';
+
+  export let id = makeUniqueId();
   export let rating;
   export let style = '';
   // TODO check if rating prop is number and between 0 and 5
@@ -41,7 +43,5 @@
   {#each stars as star}
     <Star {id} full={star} {config} />
   {/each}
-  {#if config.showText}
-    <span style="font-size:{fontSize}px">{rating}</span>
-  {/if}
+  {#if config.showText}<span style="font-size:{fontSize}px">{rating}</span>{/if}
 </div>
