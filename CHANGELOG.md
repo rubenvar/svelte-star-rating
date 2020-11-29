@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2020-11-29
+
+### Fixed
+
+- Fix problem with build
+
 ## [1.2.0] - 2020-11-29
 
 ### Added
