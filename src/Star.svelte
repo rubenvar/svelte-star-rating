@@ -1,32 +1,26 @@
 <script>
   import isNumber from './utils/isNumber';
-  // array of Numbers from 0 to 1
-  export let full;
+  export let full; // array of Numbers from 0 to 1
   // use id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
   export let id;
   export let config = {};
+
   const fullColor = config.fullColor || '#ffcf00';
   const emptyColor = config.emptyColor || '#7f7f7f';
-  // check user size input
+
+  // check (and use) user size input
   let width = config.size && isNumber(config.size) ? config.size : 20;
   width = width + 'px';
   const height = width;
 </script>
-
-<style>
-  svg {
-    width: var(--width);
-    height: var(--height);
-    margin-right: 2px;
-  }
-</style>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="249.748"
   viewBox="0 -10 187.673 179.503"
   height="239.338"
-  style="--width:{width};--height:{height}">
+  style="--width:{width};--height:{height}"
+>
   <!-- if not whole number, create gradient -->
   {#if full !== 1 && full !== 0}
     <defs>
@@ -34,10 +28,12 @@
         <stop offset="0%" style="stop-color:{fullColor};stop-opacity:1" />
         <stop
           offset="{full * 100}%"
-          style="stop-color:{fullColor};stop-opacity:1" />
+          style="stop-color:{fullColor};stop-opacity:1"
+        />
         <stop
           offset="{full * 100}%"
-          style="stop-color:{emptyColor};stop-opacity:1" />
+          style="stop-color:{emptyColor};stop-opacity:1"
+        />
       </linearGradient>
     </defs>
   {/if}
@@ -50,5 +46,14 @@
     003.878 10.298A9.953 9.953 0 0042 169.357a9.937 9.937 0
     005.114-1.424l46.724-27.925 46.707 27.925a9.936 9.936 0 0010.964-.478 9.979
     9.979 0 003.88-10.298l-12.074-53.184 40.944-35.9a9.98 9.98 0
-    002.925-10.604zm0 0" />
+    002.925-10.604zm0 0"
+  />
 </svg>
+
+<style>
+  svg {
+    width: var(--width);
+    height: var(--height);
+    margin-right: 2px;
+  }
+</style>
