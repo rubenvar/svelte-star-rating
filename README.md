@@ -46,6 +46,8 @@ About the id: **DEPRECATED**. It was required for multiple instaces of this comp
 
 ### Be aware
 
+- Passing a rating higher than 5.0 or lower than 0.0 will throw an error.
+- The component is reactive since v1.3.0 (if rating value changes, the component will change the displayed rating).
 - Any css-valid color is accepted (hsl, hex, rgb, string, etc.).
 - Stars are 1:1 proportionate (width equals height, so both equal the size property).
 - If the rating number is shown, font size is half the star size or 16px, whatever is higher.
@@ -90,13 +92,9 @@ Output:
 
 ![Advanced example of Svelte Star Rating](./docs/example-advanced.jpg)
 
-### Be careful
-
-- Passing a rating higher than 5.0 or lower than 0.0 will break the component.
-
 ## Future
 
 - [ ] Write tests.
-- [ ] Check the user input rating and return an error or something more usefull than just breaking the thing.
+- [x] Check the user input rating and throw an error if not valid.
 - [ ] Improve styling of the rating number.
 - [x] The component generates the unique id, no need to pass one.
