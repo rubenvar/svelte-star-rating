@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2021-03-22
+
+### Changed
+
+- Make rating display (svg stars and text) reactive.
+- Throw Error if rating value is not valid (higher than 5, lower than 0, or not a number).
+- Refactor code (svelte eslint) a little.
+- Readme.
+
+### Fixed
+
+- Fixed typo.
+
 ## [1.2.1] - 2020-11-29
 
 ### Fixed
