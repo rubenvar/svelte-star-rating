@@ -22,7 +22,7 @@
   $: emptyArr = Array(empty).fill(0);
   // array of star-to-be numbers
   $: stars = fullArr.concat(halfArr).concat(emptyArr);
-  // TODO do all this array thing a little more efficiently, maybe?
+  // do all this array thing a little more efficiently, maybe?
 
   // font size of rating text will be half of the star size, with a min value of 16px
   let fontSize = config.size && isNumber(config.size) ? config.size : 20;
