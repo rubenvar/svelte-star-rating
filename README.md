@@ -12,7 +12,7 @@ As with any other node package in svelte:
 npm install svelte-star-rating
 ```
 
-But remember to install it as a **dev dependency** when using [Sapper](https://sapper.svelte.dev/):
+But remember to install it as a **dev dependency** when using it with [SvelteKit](https://kit.svelte.dev/) (or [Sapper](https://sapper.svelte.dev/)):
 
 ```bash
 npm install svelte-star-rating --save-dev
