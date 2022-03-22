@@ -31,9 +31,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "rollup": "^2.15.0",
+    "rollup": "^2.70.1",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.2.2",
-    "svelte": "^3.23.1"
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.46.4"
   }
 }
