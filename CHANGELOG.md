@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.3.2] - 2022-03-22
+
+### Changed
+
+- Updated `rollup` plugins.
+
 ## [1.3.1] - 2022-03-22
 
 ### Changed
