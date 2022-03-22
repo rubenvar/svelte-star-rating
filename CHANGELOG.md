@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+## [1.3.1] - 2022-03-22
+
+### Changed
+
+- Updated dependencies.
+
 ## [1.3.0] - 2021-03-22
 
 ### Changed
