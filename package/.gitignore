@@ -1,9 +1,9 @@
-.vscode/
-
-.prettierrc
-.DS_Store
+.svelte-kit/
 node_modules/
-dist/
+.prettierrc
+
+.DS_Store
+.vscode/
 
 IDEAS.md
 DOCS.md
