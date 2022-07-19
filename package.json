@@ -23,10 +23,11 @@
     "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",
-    "prepare": "svelte-kit sync"
+    "prepare": "svelte-kit sync",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^1.0.0-next.62",
     "@sveltejs/kit": "next",
     "svelte": "^3.49.0",
     "svelte-preprocess": "^4.10.7",

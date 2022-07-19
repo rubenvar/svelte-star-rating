@@ -1,7 +1,7 @@
 <script>
   import isNumber from './isNumber';
   import makeUniqueId from './makeUniqueId';
-  import Star from './components/Star.svelte';
+  import Star from './Star.svelte';
 
   export let id = makeUniqueId();
   export let rating;
