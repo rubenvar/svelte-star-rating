@@ -1,17 +1,12 @@
-<script>
-  import isNumber from './isNumber';
-  export let full; // array of Numbers from 0 to 1
-  // use id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
-  export let id;
-  export let config = {};
-
-  const fullColor = config.fullColor || '#ffcf00';
-  const emptyColor = config.emptyColor || '#7f7f7f';
-
-  // check (and use) user size input
-  let width = config.size && isNumber(config.size) ? config.size : 20;
-  width = width + 'px';
-  const height = width;
+<script>// use id in the 'half' gradient id to make it unique and avoid same gradient in all 'half' stars
+export let id;
+export let full; // from array of Numbers 0-1
+export let fullColor = '#ffcf00';
+export let emptyColor = '#7f7f7f';
+export let size = 20;
+// check (and use) user size input
+const width = `${size}px`;
+const height = width;
 </script>
 
 <svg
