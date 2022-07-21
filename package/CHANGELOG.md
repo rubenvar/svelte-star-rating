@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-07-21
+
+### Changed
+
+- Package rewritten to use SvelteKit and Vite instead of Rollup. Packaged with `svelte-kit package`.
+- Fully typed.
+
+### Removed
+
+- Removed the `id` prop.
+
 ## [1.3.2] - 2022-03-22
 
 ### Changed
