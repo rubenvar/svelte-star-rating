@@ -47,7 +47,11 @@ The component takes a number of props:
 - The component is reactive since v1.3.0 (if rating value changes, the component will change the displayed rating).
 - Any css-valid color is accepted (hsl, hex, rgb, string, etc.).
 - Stars are 1:1 proportionate (width equals height, so both equal the size property).
-- If the rating number is shown, font size is half the star size or 16px, whatever is higher.
+- If the rating number text is shown (`showText: true`), font size is half the star size or 16px, whatever is higher.
+
+Also:
+
+- The component doesn't handle in any way the number passed as rating: If you operate on the number, you may end up with a value of `3.02 + 0.01 = 3.0299999995`, for example, due to *the way JavaScript works*. It's up to you to manage this before passing the number.
 
 ## Example
 
