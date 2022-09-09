@@ -12,7 +12,7 @@ $: if (!isNumber(rating) || rating < 0 || rating > 5) {
 }
 // number of full, 'half' and empty stars
 $: full = Math.floor(rating);
-$: half = Math.round((rating - full) * 100) / 100;
+$: half = rating - full;
 $: empty = Math.floor(5 - rating);
 // partial arrays
 $: fullArr = Array(full).fill(1);

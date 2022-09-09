@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.1] - 2022-09-29
+
+### Changed
+
+- Added a warning in readme about rating numbers not being handled by the component.
+- Updated dependencies.
+- Locked `sveltejs/kit` version to `1.0.0-next.405` until the API is more stable.
+
+### Fixed
+
+- Fixed last star disappearing if `rating` had more than one decimal `0`, ie `3.00002` or `4.001`.
+
 ## [2.0.0] - 2022-07-21
 
 ### Changed

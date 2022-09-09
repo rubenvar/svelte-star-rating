@@ -1,6 +1,6 @@
 {
   "name": "svelte-star-rating",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple svelte component that shows a rating from 0 to 5 with svg stars when passed a number.",
   "keywords": [
     "svelte",
@@ -19,13 +19,13 @@
     "url": "git+https://github.com/rubenvar/svelte-star-rating.git"
   },
   "devDependencies": {
-    "@sveltejs/kit": "next",
-    "svelte": "^3.49.0",
+    "@sveltejs/kit": "1.0.0-next.405",
+    "svelte": "^3.50.1",
     "svelte-preprocess": "^4.10.7",
-    "svelte2tsx": "^0.5.12",
+    "svelte2tsx": "^0.5.16",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
-    "vite": "^3.0.2"
+    "vite": "^3.1.0"
   },
   "type": "module",
   "exports": {
